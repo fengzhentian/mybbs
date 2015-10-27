@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
     
-<%@ include file="include.inc.jsp"%>
+<%@ include file="taglib.jsp"%>
 
 <link rel="stylesheet" type="text/css" href="<c:url value='/support/north.css'/>">
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
