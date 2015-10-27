@@ -21,5 +21,13 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<!--系统内部引用包 -->
+		<dependency>
+			<groupId>com.myapp.bbs</groupId>
+			<artifactId>bbs-dao</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
