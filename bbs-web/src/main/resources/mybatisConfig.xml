@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//ibatis.apache.org//DTD Config 3.0//EN"
+"http://ibatis.apache.org/dtd/ibatis-3-config.dtd">
+<configuration>
+	<properties>
+		<property name="dialect" value="oracle" />
+		<property name="pageSqlId" value=".*Page$" />
+	</properties>
+	<typeAliases>
+		<!-- 为一个vo类取一个别名儿，后面用的时候可以直接用该vo类的别名 而不用在写 包+类名称 -->
+
+		<!-- <typeAlias type="com.yawei.jhoa.dao.core.conference.model.MeetingRoom" 
+			alias="MeetingRoom" /> -->
+	</typeAliases>
+	<plugins>
+		<plugin interceptor="com.myapp.mybatis.plugin.PageInterceptor">
+		</plugin>
+	</plugins>
+	<mappers>
+		<!-- 对应vo类的DAO接口 所对应的xml配置文件的路径信息 -->
+
+		<!-- <mapper resource="com/yawei/jhoa/dao/core/conference/mapper/MeetingRoomMapper.xml" 
+			/> -->
+	</mappers>
+</configuration>

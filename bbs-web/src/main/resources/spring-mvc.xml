@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+						http://www.springframework.org/schema/mvc/spring-mvc.xsd
+						http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd 
+						http://www.springframework.org/schema/context 
+						http://www.springframework.org/schema/context/spring-context.xsd
+						http://www.springframework.org/schema/tx 
+						http://www.springframework.org/schema/tx/spring-tx.xsd"
+	xmlns:tx="http://www.springframework.org/schema/tx">
+
+	<!-- 启用spring mvc 注解 -->
+	<context:annotation-config />
+
+	<!-- 设置使用注解的类所在的jar包，这里必须排除扫描service层的组件 -->
+	<context:component-scan base-package="com.yawei.jhoa.controller" />
+
+	<!-- 完成请求和注解POJO的映射 -->
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+
+	<!--访问静态资源 -->
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="false">
+			<!-- 避免IE执行AJAX时,返回JSON出现下载文件 -->
+			<bean id="fastJsonHttpMessageConverter"
+				class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<!-- 这里顺序不能反，一定先写text/html,不然ie下出现下载提示 -->
+						<value>text/html;charset=UTF-8</value>
+						<value>application/json;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	<!--配置不希望被mvc拦截的  -->
+	<mvc:resources location="/business/" mapping="/business/**"
+		cache-period="31536000" />
+	<mvc:resources location="/images/" mapping="/images/**"
+		cache-period="31536000" />
+	<mvc:resources location="/support/" mapping="/support/**"
+		cache-period="31536000" />
+	<mvc:resources location="/ftemp/" mapping="/ftemp/**"
+		cache-period="31536000" />
+
+	<!-- 配置mvc的拦截器 可以配置多个,按照生命顺序进行链式执行 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- 需要被拦截的路径 -->
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/business/**"/>
+			<mvc:exclude-mapping path="/images/**"/>
+			<mvc:exclude-mapping path="/support/**"/>
+			<mvc:exclude-mapping path="/check"/>
+			<mvc:exclude-mapping path="/sheettpl/server"/>
+			<!-- 拦截处理的interceptor -->
+			<bean class="com.myapp.interceptor.IdentityInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+	<!--展现 -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- 总错误处理 -->
+	<bean id="exceptionResolver"
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<!-- <property name="exceptionMappings">
+			<props>
+				<prop key="com.ziyou.platform.interceptor.SessionTimeoutException">redirect:/login</prop>
+			</props>
+		</property> -->
+		<!-- <property name="defaultErrorView"> <value>/error/error</value> </property> 
+			<property name="defaultStatusCode"> <value>500</value> </property> <property 
+			name="warnLogCategory"> <value>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver 
+			</value> </property> -->
+	</bean>
+</beans>
