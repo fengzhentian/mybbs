@@ -1,0 +1,363 @@
+/* 头部样式 */
+@CHARSET "UTF-8";
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #ff2400;
+}
+
+body, td, th {
+	font-size: 12px;
+	color: #000;
+}
+
+.nav {
+	color: #484848;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.nav:link {
+	color: #484848;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.nav:visited {
+	color: #484848;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.nav:hover {
+	color: #da1e06;
+	text-decoration: none;
+}
+
+.zxx_text_overflow_1 {
+	max-width: 37em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/*---------- 更多菜单样式start ----------*/
+.moremenu {
+	font-family: Verdana, Arial, Helvetica, sans-serif, SimSun;
+	background-color: white;
+	position: absolute;
+	z-index: 99999999;
+	left: 0px;
+	top: 0px;
+	font-size: 12px;
+	color: #333333;
+	padding-left: 0px;
+	height: 400px;
+	overflow: auto;
+	width: 700px;
+}
+
+.moremenu a:link {
+	text-decoration: none;
+	color: #333333;
+}
+
+.moremenu a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+
+.moremenu a:hover {
+	text-decoration: underline;
+	color: #cc0000;
+}
+
+.bord {
+	border: 1px #6895c9 solid;
+}
+
+.navson {
+	font-size: 12px;
+	color: #cc0000;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a.navson:link {
+	color: #cc0000;
+	font-weight: bold;
+}
+
+a.navson:visited {
+	color: #cc0000;
+}
+
+a.navson:hover {
+	text-decoration: underline;
+	color: #cc0000;
+}
+
+.moremenu td {
+	white-space: nowrap;
+}
+/*---------- 更多菜单样式end ----------*/
+
+/*---------- 通用 ----------*/
+html, body, div, span, object, iframe, table, tr, th, td, em, img, h1,
+	h2, h3, h4, h5, h6, p, a, dl, dt, dd, ul, ol, li, form, label, input,
+	button, textarea, pre, fieldset {
+	font-family: inherit;
+	font-style: inherit;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	-webkit-text-size-adjust: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.clb {
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.tc {
+	text-align: center;
+}
+
+.tl {
+	text-align: left;
+}
+
+.tr {
+	text-align: right;
+}
+
+.ov {
+	overflow: hidden;
+}
+
+.fb {
+	font-weight: bold;
+}
+
+.pt10 {
+	padding-top: 10px;
+}
+
+.mr6 {
+	margin-right: 6px;
+}
+
+.mr9 {
+	margin-right: 9px;
+}
+
+.mt8 {
+	margin-top: 8px;
+}
+/*---------- 截字 ----------*/
+.jie {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/*---------- 链接 ----------*/
+a:link {
+	text-decoration: none;
+	color: #333;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #333;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #ff2400;
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #d6e5ff;
+}
+
+a:link {
+	text-decoration: none;
+	color: #000;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #ff2400;
+}
+
+body, td, th {
+	font-size: 14px;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+	color: #484848;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.nav:link {
+	color: #484848;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.nav:visited {
+	color: #484848;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.nav:hover {
+	color: #da1e06;
+	text-decoration: none;
+}
+
+.dalan {
+	font-size: 14px;
+	color: #00234d;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.dalan:link {
+	font-size: 14px;
+	color: #00234d;
+	font-weight: bold;
+}
+
+a.dalan:visited {
+	font-size: 14px;
+	color: #00234d;
+	font-weight: bold;
+}
+
+a.dalan:hover {
+	color: #fe040e;
+	text-decoration: none;
+}
+
+.lan {
+	font-size: 14px;
+	color: #034aa4;
+	text-decoration: none;
+}
+
+a.lan:link {
+	font-size: 14px;
+	color: #034aa4;
+}
+
+a.lan:visited {
+	font-size: 14px;
+	color: #034aa4;
+}
+
+a.lan:hover {
+	color: #fe040e;
+	text-decoration: none;
+}
+
+.bwrite {
+	font-size: 14px;
+	color: #FFF;
+}
+
+.sw {
+	font-size: 12px;
+	color: #fff;
+}
+
+a.sw:link {
+	font-size: 12px;
+	color: #fff;
+}
+
+a.sw:visited {
+	font-size: 12px;
+	color: #fff;
+}
+
+a.sw:hover {
+	color: #ff1e00;
+}
+
+.rbanner {
+	height: 30px;
+	background-color: #4f99f3;
+	color: #FFF;
+}
+
+.search * {
+	vertical-align: middle;
+}
+
+.border {
+	border: 1px #a2bddb solid;
+}
+
+.gray {
+	color: #4a4a4a;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+a.gray:link {
+	color: #4a4a4a;
+}
+
+a.gray:visited {
+	color: #4a4a4a;
+}
+
+a.gray:hover {
+	color: #fe040e;
+	text-decoration: none;
+}

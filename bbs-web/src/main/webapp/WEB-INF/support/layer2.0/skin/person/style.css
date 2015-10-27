@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+/* 选择器格式为：html #layui_layer_skin文件夹名stylecss，这一点非常重要 */
+html #layui_layer_skinpersonstylecss {
+	display: none;
+	position: absolute;
+	width: 1989px;
+}
+
+body .layer-ext-person .layui-layer-title {
+	/* 	background-color: #DCDCDC; */
+	background-color: #EEEEEE;
+	border-width: 0px;
+	font-size: 19px;
+	font-weight: bold;
+	text-align: center;
+}
+
+body .layer-ext-person iframe {
+	background-color: #EEEEEE;
+}

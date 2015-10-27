@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+
+/*****提交表单的样式，根据id*****/
+#fm, #editFm, #add-toolbar, #edit-toolbar {
+	margin: 0;
+	padding: 5px 5px;
+}
+
+/*****easyui的菜单栏样式*****/
+.toolbar-wrapper {
+	width: 100%;
+	overflow: auto;
+	border-bottom: 1px solid #ddd;
+	background: #CCDDFF;
+}
+
+/* 菜单栏左浮动 */
+.datagrid-toolbar .div-left {
+	float: left;
+}
+
+/* 菜单栏右浮动 */
+.datagrid-toolbar .div-right {
+	float: right;
+}
+
+/* 检索框DIV样式 */
+.datagrid-toolbar .div-searchbox {
+	float: right;
+	padding-right: 10px;
+	height: 28px;
+	line-height: 28px;
+}
+
+.searchbox-size {
+	width: 130px;
+	height: 20px;
+	text-align: center;
+	/* 	padding: auto 0px; */
+	/* 	margin: auto; */
+}
+
+/*****列表分类位置*****/
+.sort-div {
+	height: 30px;
+	*height: 28px;
+	line-height: 30px;
+	*line-height: 25px;
+	position: absolute;
+	margin-left: -120px;
+	margin-top: -15px;
+	*margin-top: -11px;
+	top: 50%;
+}
+
+/* 列表空行 */
+td.blank-line {
+	height: 25px;
+	text-align: left;
+	padding-left: 5px;
+	font-size: 12px;
+}
+
+/*****表单的输入聚焦*****/
+input:focus, textarea:focus {
+	border: 1px solid #808080;
+	background: rgb(246, 245, 245);
+}
+
+input[type=checkbox]:focus {
+	border: 0px;
+}

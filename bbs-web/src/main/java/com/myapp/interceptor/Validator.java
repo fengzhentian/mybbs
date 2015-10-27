@@ -13,10 +13,10 @@ import com.myapp.object.CurrentUser;
 
 public class Validator
 {
-	/**
-	 *  log4j日志
-	 */
-	private static final Logger log = Logger.getLogger(Validator.class);
+//	/**
+//	 *  log4j日志
+//	 */
+//	private static final Logger log = Logger.getLogger(Validator.class);
 
 	private static ThreadLocal<Validator> validatorHolder = new ThreadLocal<Validator>()
 	{

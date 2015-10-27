@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.myapp.bbs</groupId>
 	<artifactId>bbs</artifactId>
@@ -80,11 +81,26 @@
 		</resources>
 	</build>
 
+	<!-- 链接远程仓库 -->
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://www.yawei.com.cn:8081/nexus/content/groups/ywGroup</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>Team Nexus Repository</name>
+			<url>http://www.yawei.com.cn:8081/nexus/content/groups/ywGroup</url>
+		</pluginRepository>
+	</pluginRepositories>
 	<modules>
 		<module>bbs-dao</module>
 		<module>bbs-service</module>
 		<module>bbs-web</module>
 		<module>myapp-mybatis</module>
-    <module>myapp-utils</module>
-  </modules>
+		<module>myapp-utils</module>
+	</modules>
 </project>

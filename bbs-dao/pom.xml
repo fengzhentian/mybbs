@@ -15,13 +15,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<dependencies>
+		<!-- springframework扩展，比如注解 -->
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.1.4.RELEASE</version>
 		</dependency>
-
+		<dependency>
+		  <groupId>com.oracle</groupId>
+		  <artifactId>ojdbc-12c</artifactId>
+		  <version>7.0.0</version>
+		</dependency>
 
 		<!--系统内部引用包 -->
 		<dependency>

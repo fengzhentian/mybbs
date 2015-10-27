@@ -54,7 +54,6 @@
 			<version>1.3.1</version>
 		</dependency>
 
-
 		<!--系统内部引用包 -->
 		<dependency>
 			<groupId>com.myapp.bbs</groupId>

@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+/* 选择器格式为：html #layui_layer_skin文件夹名stylecss，这一点非常重要 */
+html #layui_layer_skintipstylecss {
+	display: none;
+	position: absolute;
+	width: 1989px;
+}
+
+/* 透明度 */
+body .layer-ext-tips .layui-layer-content {
+	/* 	filter: alpha(opacity = 80); */
+	/* 	-moz-opacity: 0.8; */
+	/* 	-khtml-opacity: 0.8; */
+	/* 	opacity: 0.8; */
+}
+
+/* 字号颜色 */
+body .layer-ext-tips .layui-layer-content {
+	color: #000000;
+}
